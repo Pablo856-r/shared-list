@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 Lista Compartida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Lista Compartida</h1>
+            <p class="subtitle">Añade, marca y comparte tu lista</p>
+        </header>
+
+        <main>
+            <!-- Sección de entrada -->
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="itemInput" 
+                    class="item-input" 
+                    placeholder="📌 Añade un elemento a la lista..."
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="add-btn">➕ Añadir</button>
+            </div>
+
+            <!-- Opciones -->
+            <div class="options">
+                <button id="clearBtn" class="clear-btn">🗑️ Limpiar lista</button>
+                <span id="itemCount" class="item-count">0 elementos</span>
+            </div>
+
+            <!-- Lista de items -->
+            <ul id="itemList" class="item-list">
+                <!-- Los items se generarán con JavaScript -->
+            </ul>
+
+            <!-- Mensaje vacío -->
+            <div id="emptyMessage" class="empty-message">
+                <p>📭 Tu lista está vacía</p>
+                <p class="hint">¡Empieza a añadir elementos!</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Aplicación de lista compartida con Spring Boot & H2</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+target/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+.git/
+.gitignore
+README.md
+HELP.md
+mvnw
+mvnw.cmd
+.dockerignore
+render.yaml
