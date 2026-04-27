@@ -22,5 +22,5 @@ RUN ./mvnw clean package -DskipTests
 # Expose port
 EXPOSE 8080
 
-# Run the application (Railway handles port mapping automatically)
-CMD ["java", "-jar", "target/shared-list-0.0.1-SNAPSHOT.jar"]
+# Run the application with explicit port override
+CMD ["java", "-Dserver.port=8080", "-jar", "target/shared-list-0.0.1-SNAPSHOT.jar"]
