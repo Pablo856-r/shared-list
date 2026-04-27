@@ -22,5 +22,8 @@ RUN ./mvnw clean package -DskipTests
 # Expose port
 EXPOSE 8080
 
+# Create a startup script
+RUN echo '#!/bin/bash\njava -Dserver.port=$PORT -jar target/shared-list-0.0.1-SNAPSHOT.jar' > /app/start.sh && chmod +x /app/start.sh
+
 # Run the application
-CMD java -Dserver.port=$PORT -jar target/shared-list-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["/app/start.sh"]
