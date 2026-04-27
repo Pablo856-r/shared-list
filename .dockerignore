@@ -10,7 +10,5 @@ Thumbs.db
 .gitignore
 README.md
 HELP.md
-mvnw
-mvnw.cmd
 .dockerignore
 render.yaml
