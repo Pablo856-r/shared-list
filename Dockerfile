@@ -1,5 +1,5 @@
-# Usar imagen base de Java 21
-FROM openjdk:21-jdk
+# Usar imagen base de Java 17 (LTS - más estable que Java 21)
+FROM openjdk:17-slim
 
 # Establecer directorio de trabajo
 WORKDIR /app
