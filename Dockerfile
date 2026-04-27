@@ -23,4 +23,4 @@ RUN ./mvnw clean package -DskipTests
 EXPOSE 8080
 
 # Run the application
-CMD ["java", "-jar", "target/shared-list-0.0.1-SNAPSHOT.jar"]
+CMD java -Dserver.port=$PORT -jar target/shared-list-0.0.1-SNAPSHOT.jar
