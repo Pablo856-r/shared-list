@@ -1,5 +1,5 @@
 # Usar imagen base de Java 21
-FROM openjdk:21-jdk-slim
+FROM openjdk:21-slim
 
 # Establecer directorio de trabajo
 WORKDIR /app
@@ -7,12 +7,15 @@ WORKDIR /app
 # Copiar archivos del proyecto
 COPY pom.xml .
 COPY src ./src
+COPY mvnw .
+COPY mvnw.cmd .
+COPY .mvn .mvn
 
-# Instalar Maven
-RUN apt-get update && apt-get install -y maven
+# Dar permisos de ejecución al wrapper de Maven
+RUN chmod +x mvnw
 
 # Compilar la aplicación
-RUN mvn clean package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 # Exponer puerto
 EXPOSE 8080
